@@ -1,3 +1,9 @@
+## TOC
+- [Chapter 1: Basic of JavaScript](#chapter-1-basic-of-javascript)
+
+- [Chapter 2 (Loops, Array.form , Map , Filter , Reduce )](#chapter-2-loops-arrayform--map--filter--reduce-)
+
+________
 ## Chapter 1: Basic of JavaScript
 
 **Basic Chapters (HandWrittenNotes):** [**Here**](./HandWrittenNotes/README.md)
