@@ -86,7 +86,7 @@ let a = document.getElementsByClassName("sentence-words ng-tns-c2546395954-1 ng-
 ```
 Now if you do `typeof a` you will get `object` as output
 - Now if you do `a.forEach()` you will get an error `a.forEach is not a function` so we have to convert it into an array
-- Now if you do `let b = Array.from(a)` you will get an array of all the elements in b
+- Now if you do `Array.from(a)` you will get an array of all the elements
 
 Another example:
 > String to Array
