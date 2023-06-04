@@ -1,8 +1,3 @@
-# javascript-notes
+**Check Other Chapters (HandWrittenNotes):** [**Here**](./HandWrittenNotes/README.md)
 
-![Alt text](./assets/js1.png)
-![Alt text](./assets/js2.png)
-![Alt text](./assets/js3.png)
-![Alt text](./assets/js4.png)
-![Alt text](./assets/js5.png)
-![Alt text](./assets/js5.1.png)
+[**Setup, Const, Let , Var , Primitives and Object ,Operators and Expressions , Conditional Expression ,Operators and Conditional,For Loops , While Loops , Function , String , Array**]
