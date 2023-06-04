@@ -205,7 +205,7 @@ Sure! Here's an explanation of the `reduce` method with an example:
 
 #### 🔗 reduce
 
-↠  reduce() method - It is used to apply a function to each element in an array and reduce the array to a single value
+↠  reduce() method - It is used to apply a function to each element in an array and reduce the array to a single value and returns a single value
 
 ```js
 let arr = [45, 46, 89, 82, 79]
