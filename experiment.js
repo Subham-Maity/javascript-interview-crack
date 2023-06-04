@@ -16,8 +16,8 @@
 // Chapter 3
 
 let arr = [45, 46, 89, 82, 79]
-let newArr = arr.map((value) => {
-    return value + 5
-})
+let newArr = arr.map((value, index, array) => {
+    return `Index: ${index} and Value: ${value} and Array: ${array}`;
+        })
 console.log(arr)
 console.log(newArr)

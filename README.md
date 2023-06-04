@@ -92,3 +92,39 @@ console.log(newArr)
 > - For each element in `arr`, the function takes the element as an input (`value`), adds 5 to it, and returns the result.
 > - The returned values are used to create a new array `newArr`, which has the values `[50, 51, 94, 87, 84]`.
 > - The original `arr` array remains unchanged.
+
+**map() method with index and value**
+> similarly forEach() method also works like this
+```js
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.map((value, index, array) => {
+    return `Index: ${index} and Value: ${value} and Array: ${array}`;
+})
+console.log(arr)
+console.log(newArr)
+
+// Output: [45, 46, 89, 82, 79]
+// 'Index: 0 and Value: 45 and Array: 45,46,89,82,79',
+// 'Index: 1 and Value: 46 and Array: 45,46,89,82,79',
+// 'Index: 2 and Value: 89 and Array: 45,46,89,82,79',
+// 'Index: 3 and Value: 82 and Array: 45,46,89,82,79',
+// 'Index: 4 and Value: 79 and Array: 45,46,89,82,79'
+```
+
+another example:
+```js
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.map((value, index, array) => {
+    return `The sum of ${value} and ${index} is ${value + index} and the array is ${array}` 
+})
+
+console.log(arr)
+console.log(newArr)
+
+// 'The sum of 45 and 0 is 45 and the array is 45,46,89,82,79',
+// 'The sum of 46 and 1 is 47 and the array is 45,46,89,82,79',
+// 'The sum of 89 and 2 is 91 and the array is 45,46,89,82,79',
+// 'The sum of 82 and 3 is 85 and the array is 45,46,89,82,79',
+// 'The sum of 79 and 4 is 83 and the array is 45,46,89,82,79'
+
+```
