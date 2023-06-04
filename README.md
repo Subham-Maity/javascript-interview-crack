@@ -22,6 +22,7 @@ ___
 - [Array.from() method](#-arrayfrom)
 - [map() method](#-map)
 - [filter() method](#-filter)
+- [reduce() method](#-reduce)
 
 
 - For Loops With Arrays
