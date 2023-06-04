@@ -126,5 +126,49 @@ console.log(newArr)
 // 'The sum of 89 and 2 is 91 and the array is 45,46,89,82,79',
 // 'The sum of 82 and 3 is 85 and the array is 45,46,89,82,79',
 // 'The sum of 79 and 4 is 83 and the array is 45,46,89,82,79'
+```
+↠  filter() method - It is used to filter out the elements from an array based on a condition and create a new array 
+
+```js
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.filter((value) => {
+    return value > 50
+})
+console.log(arr)
+console.log(newArr)
+// Output: [45, 46, 89, 82, 79]
+// Output: [89, 82, 79]
+```
+> - Call the `filter` method on `arr` and pass it a function as an argument. This function takes a `value` as an input and returns `value > 50`.
+> - The `filter` method iterates over each element in the `arr` array and applies the provided function to it.
+> - For each element in `arr`, the function takes the element as an input (`value`), checks if it is greater than 50, and returns the result.
+> - The returned values are used to create a new array `newArr`, which has the values `[89, 82, 79]`.
+> - The original `arr` array remains unchanged.
+
+**filter() method with index and value**
+> In this example uses the `filter` method and all three of its arguments (`value`, `index`, and `array`) to create a new array that only includes elements from the original `arr` array that are greater than its average.
+
+```js
+let arr = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+let newArr = arr.filter((value, index, array) => {
+    let sum = array.reduce((acc, curr) => acc + curr)
+    let avg = sum / array.length
+    return value > avg
+})
+console.log(arr)
+console.log(newArr)
+
+    // [
+    // 2, 3, 4,  5, 6,
+    //     7, 8, 9, 10
+    // ]
+    // [ 7, 8, 9, 10 ]
 
 ```
+- `newArr` is a new array created using the `filter` method on `arr`.
+- The `filter` method takes a function as an argument and applies it to each element in `arr`.
+- The function calculates the average of all elements in `arr` and checks if the current element is greater than the average.
+- If the current element is greater than the average, it is included in `newArr`.
+- The original `arr` array remains unchanged.
+
+
