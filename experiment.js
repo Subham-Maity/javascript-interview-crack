@@ -33,12 +33,22 @@
 // // Output: [89, 82, 79]
 
 
-let arr = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-let newArr = arr.filter((value, index, array) => {
-    let sum = array.reduce((acc, curr) => acc + curr)
-    let avg = sum / array.length
-    return value > avg
-})
+// let arr = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let newArr = arr.filter((value, index, array) => {
+//     let sum = array.reduce((acc, curr) => acc + curr)
+//     let avg = sum / array.length
+//     return value > avg
+// })
+// console.log(arr)
+// console.log(newArr)
+
+
+//Reduce
+let arr = [45, 46, 89, 82, 79]
+let sum = arr.reduce((acc, value) => {
+    return acc + value
+}, 0)
 console.log(arr)
-console.log(newArr)
+console.log(sum)
+
 

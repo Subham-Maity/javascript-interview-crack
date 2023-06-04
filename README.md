@@ -201,3 +201,28 @@ console.log(newArr)
 - The original `arr` array remains unchanged.
 
 
+Sure! Here's an explanation of the `reduce` method with an example:
+
+#### 🔗 reduce
+
+↠  reduce() method - It is used to apply a function to each element in an array and reduce the array to a single value
+
+```js
+let arr = [45, 46, 89, 82, 79]
+let sum = arr.reduce((acc, value) => {
+    return acc + value
+}, 0)
+console.log(arr)
+console.log(sum)
+// Output: [45, 46, 89, 82, 79]
+// Output: 341
+```
+
+> - Call the `reduce` method on `arr` and pass it a function as an argument. This function takes two arguments: `acc` and `value`. The `acc` argument represents the accumulated value returned in the last invocation of the function. The `value` argument represents the current element being processed in the array.
+> - The `reduce` method also takes an optional second argument that represents the initial value of the accumulator. In this case, we pass `0` as the initial value of the accumulator.
+> - The `reduce` method iterates over each element in the `arr` array and applies the provided function to it.
+> - For each element in `arr`, the function takes the accumulated value (`acc`) and the current element (`value`) as inputs, adds them together, and returns the result.
+> - The returned values are accumulated and used to calculate the final result of the `reduce` method.
+> - The final result of the `reduce` method is assigned to the variable `sum`, which has the value `341`.
+> - The original `arr` array remains unchanged.
+
