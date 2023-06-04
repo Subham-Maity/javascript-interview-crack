@@ -10,10 +10,25 @@ ________
 
 [**Setup, Const, Let , Var , Primitives and Object, Operators and Expressions, Conditional Expression, Operators and Conditional, For Loops, While Loops , Function , String , Array**]
 
+___
+
 ## Chapter 2 (Loops, Array.form , Map , Filter , Reduce )
+
+### TOC
+- [Normal for loop](#-normal-for-loop)
+- [forEach loop](#-foreach-loop)
+- [for...of loop](#-forof-loop)
+- [for...in loop](#-forin-loop)
+- [Array.from() method](#-arrayfrom)
+- [map() method](#-map)
+- [filter() method](#-filter)
+
+
 - For Loops With Arrays
 
 `let num = [1, 2, 3, 4, 5]`
+
+#### 🔗 Normal for loop
 
 ↠ **Normal for loop** - Print the number
 ```js
@@ -24,6 +39,8 @@ for (let i = 0; i < num.length; i++){
 }
 // Output: 1 2 3 4 5
 ```
+#### 🔗 forEach loop
+
 ↠ **forEach loop** - Print square of each element
 ```js
 num.forEach((element) => {
@@ -34,6 +51,8 @@ num.forEach((element) => {
 ```
 > Here element is a parameter of the function, and it is a callback function
 
+#### 🔗 for...of loop
+
 ↠ **for...of loop** - Print the number
 ```js
 for (let element of num){
@@ -43,6 +62,8 @@ for (let element of num){
 ```
 > Better than normal for loop
 
+#### 🔗 for...in loop
+
 ↠ **for...in loop** - Print the index of the number
 ```js
 for (let index in num){
@@ -51,6 +72,8 @@ for (let index in num){
 // Output: 0 1 2 3 4
 ```
 > It will print the index of the number or key of the object
+
+#### 🔗 Array.from
 
 ↠ **Array.from() method** - It is used to convert an object into an array
 
@@ -73,7 +96,7 @@ console.log(b)
 // Output: ["S", "u", "b", "h", "a", "m"]
 ```
 
-
+#### 🔗 map
 
 
 ↠  **map() method** - It is used to create a new array from an existing array and apply a function to it
@@ -92,6 +115,8 @@ console.log(newArr)
 > - For each element in `arr`, the function takes the element as an input (`value`), adds 5 to it, and returns the result.
 > - The returned values are used to create a new array `newArr`, which has the values `[50, 51, 94, 87, 84]`.
 > - The original `arr` array remains unchanged.
+
+
 
 **map() method with index and value**
 > similarly forEach() method also works like this
@@ -127,6 +152,8 @@ console.log(newArr)
 // 'The sum of 82 and 3 is 85 and the array is 45,46,89,82,79',
 // 'The sum of 79 and 4 is 83 and the array is 45,46,89,82,79'
 ```
+#### 🔗 filter
+
 ↠  filter() method - It is used to filter out the elements from an array based on a condition and create a new array 
 
 ```js
@@ -144,6 +171,8 @@ console.log(newArr)
 > - For each element in `arr`, the function takes the element as an input (`value`), checks if it is greater than 50, and returns the result.
 > - The returned values are used to create a new array `newArr`, which has the values `[89, 82, 79]`.
 > - The original `arr` array remains unchanged.
+
+
 
 **filter() method with index and value**
 > In this example uses the `filter` method and all three of its arguments (`value`, `index`, and `array`) to create a new array that only includes elements from the original `arr` array that are greater than its average.
