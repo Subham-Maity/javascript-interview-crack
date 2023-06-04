@@ -1,4 +1,4 @@
-# javascript-notes
+# Chapter 1: Basic of JavaScript
 
 ![Alt text](./assets/js1.png)
 ![Alt text](./assets/js2.png)
