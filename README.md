@@ -53,7 +53,7 @@ for (let index in num){
 > It will print the index of the number or key of the object
 
 ↠ Array.from() method - It is used to convert an object into an array
-- 
+
 - Open a webpage then open inspect element and go to console and write the following code
 - Go to Element tab and take any class name for example: `sentence-words ng-tns-c2546395954-1 ng-star-inserted ng-animating`
 - Now, if you do this in your console tab you will get a collection of elements
