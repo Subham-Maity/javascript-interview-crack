@@ -15,7 +15,7 @@ ________
 
 `let num = [1, 2, 3, 4, 5]`
 
-↠ Normal for loop - Print the number
+↠ **Normal for loop** - Print the number
 ```js
 // Use let i instead of let a for clarity and consistency
 // Use i < num.length instead of i <= num.length to avoid out-of-bounds error
@@ -24,7 +24,7 @@ for (let i = 0; i < num.length; i++){
 }
 // Output: 1 2 3 4 5
 ```
-↠ forEach loop - Print square of each element
+↠ **forEach loop** - Print square of each element
 ```js
 num.forEach((element) => {
         console.log(element * element)
@@ -34,7 +34,7 @@ num.forEach((element) => {
 ```
 > Here element is a parameter of the function, and it is a callback function
 
-↠ for...of loop - Print the number
+↠ **for...of loop** - Print the number
 ```js
 for (let element of num){
     console.log(element) // Use element instead of a for consistency
@@ -43,7 +43,7 @@ for (let element of num){
 ```
 > Better than normal for loop
 
-↠ for...in loop - Print the index of the number
+↠ **for...in loop** - Print the index of the number
 ```js
 for (let index in num){
     console.log(index) // Use index instead of a for clarity
@@ -52,7 +52,7 @@ for (let index in num){
 ```
 > It will print the index of the number or key of the object
 
-↠ Array.from() method - It is used to convert an object into an array
+↠ **Array.from() method** - It is used to convert an object into an array
 
 - Open a webpage then open inspect element and go to console and write the following code
 - Go to Element tab and take any class name for example: `sentence-words ng-tns-c2546395954-1 ng-star-inserted ng-animating`
@@ -76,7 +76,7 @@ console.log(b)
 
 
 
-↠  map() method - It is used to create a new array from an existing array and apply a function to it
+↠  **map() method** - It is used to create a new array from an existing array and apply a function to it
 ```js
 let arr = [45, 46, 89, 82, 79]
 let newArr = arr.map((value) => {
