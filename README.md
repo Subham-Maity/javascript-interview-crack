@@ -47,6 +47,7 @@ for (let index in num){
 > It will print the index of the number or key of the object
 
 ↠ Array.from() method - It is used to convert an object into an array
+- 
 - Open a webpage then open inspect element and go to console and write the following code
 - Go to Element tab and take any class name for example: `sentence-words ng-tns-c2546395954-1 ng-star-inserted ng-animating`
 - Now, if you do this in your console tab you will get a collection of elements
@@ -67,3 +68,21 @@ console.log(b)
 ```
 
 
+
+
+↠  map() method - It is used to create a new array from an existing array and apply a function to it
+```js
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.map((value) => {
+    return value + 5
+})
+console.log(arr)
+console.log(newArr)
+// Output: [45, 46, 89, 82, 79]
+// Output: [50, 51, 94, 87, 84]
+```
+> - Call the `map` method on `arr` and pass it a function as an argument. This function takes a `value` as an input and returns `value + 5`.
+> - The `map` method iterates over each element in the `arr` array and applies the provided function to it.
+> - For each element in `arr`, the function takes the element as an input (`value`), adds 5 to it, and returns the result.
+> - The returned values are used to create a new array `newArr`, which has the values `[50, 51, 94, 87, 84]`.
+> - The original `arr` array remains unchanged.

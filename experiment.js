@@ -1,5 +1,5 @@
 // Chapter 2
-let num = [1, 2, 3, 4, 5]
+// let num = [1, 2, 3, 4, 5]
 
 
 // //↠ Print the number
@@ -13,4 +13,11 @@ let num = [1, 2, 3, 4, 5]
 //     }
 // )
 
+// Chapter 3
 
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.map((value) => {
+    return value + 5
+})
+console.log(arr)
+console.log(newArr)
