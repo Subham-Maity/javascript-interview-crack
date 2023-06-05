@@ -45,9 +45,11 @@
 
 //Reduce
 let arr = [45, 46, 89, 82, 79]
-let sum = arr.reduce((acc, value) => {
+
+let reduces = (acc, value) => {
     return acc + value
-})
+}
+let sum = arr.reduce(reduces)
 console.log(arr)
 console.log(sum)
 

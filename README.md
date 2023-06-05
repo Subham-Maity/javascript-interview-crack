@@ -14,6 +14,11 @@ ___
 
 ## Chapter 2 (Loops, Array.form , Map , Filter , Reduce )
 
+### Short Article
+
+- [**Hashnode**](https://codexam.hashnode.dev/how-to-use-loops-arrayfrom-map-filter-and-reduce-in-javascript)
+- [**Dev.to**](https://dev.to/codexam/how-to-use-loops-arrayfrom-map-filter-and-reduce-in-javascript-1f8l)
+
 ### TOC
 - [Normal for loop](#-normal-for-loop)
 - [forEach loop](#-foreach-loop)
@@ -227,3 +232,17 @@ console.log(sum)
 > - The final result of the `reduce` method is assigned to the variable `sum`, which has the value `341`.
 > - The original `arr` array remains unchanged.
 
+You can write separate function also and then pass it to reduce method
+
+```js
+let arr = [45, 46, 89, 82, 79]
+
+let reduces = (acc, value) => {
+    return acc + value
+}
+let sum = arr.reduce(reduces)
+console.log(arr)
+console.log(sum)
+
+//Output: [45, 46, 89, 82, 79]
+```
