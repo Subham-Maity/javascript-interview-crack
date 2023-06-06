@@ -12,7 +12,7 @@ ________
 
 ___
 
-## Chapter 2 (Loops, Array.form , Map , Filter , Reduce )
+## Chapter 2 (Loops, Array.form , Map , Filter , Reduce , parseInt, push and prompt)
 
 ### Short Article
 
@@ -28,6 +28,7 @@ ___
 - [map() method](#-map)
 - [filter() method](#-filter)
 - [reduce() method](#-reduce)
+- [parseInt, push and prompt](#-parseint-push-and-prompt)
 
 
 - For Loops With Arrays
@@ -158,6 +159,20 @@ console.log(newArr)
 // 'The sum of 82 and 3 is 85 and the array is 45,46,89,82,79',
 // 'The sum of 79 and 4 is 83 and the array is 45,46,89,82,79'
 ```
+
+another example:
+```js
+//Square of each element
+let arr = [45, 46, 89, 82, 79]
+let newArr = arr.map((value, index, array) => {
+    return value * value
+})
+console.log(arr)
+console.log(newArr)
+// Output: [45, 46, 89, 82, 79]
+// Output: [2025, 2116, 7921, 6724, 6241]
+```
+
 #### 🔗 filter
 
 ↠  filter() method - It is used to filter out the elements from an array based on a condition and create a new array 
@@ -206,8 +221,37 @@ console.log(newArr)
 - If the current element is greater than the average, it is included in `newArr`.
 - The original `arr` array remains unchanged.
 
+Another Example
+```js
+// Filter for divisible by 10 and print the array
 
-Sure! Here's an explanation of the `reduce` method with an example:
+let arr = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
+
+const filters = (a) => {
+
+    return a % 10 === 0;
+
+}
+
+let divFilter = arr.filter(filters)
+
+console.log(divFilter)
+
+
+// _______________________________________________________
+// or, 
+// _______________________________________________________
+
+let arr = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
+
+let divFilter = arr.filter((a)=>{
+    return a % 10 === 0
+})
+
+console.log(divFilter)
+
+// Output: [10, 20, 30, 40, 50]
+```
 
 #### 🔗 reduce
 
@@ -246,3 +290,67 @@ console.log(sum)
 
 //Output: [45, 46, 89, 82, 79]
 ```
+
+Another Example
+```js
+//Multiply all the elements in the array
+
+let arr = [1, 2, 3, 4, 5]
+
+let multiply = arr.reduce((x, y) => {
+    return x * y
+})
+
+console.log(multiply)
+
+// Output: 120
+```
+
+
+
+#### 🔗 parseInt, push and prompt
+
+↠  `parseInt()` method - It is used to parse a string argument and return an integer of the specified radix (the base in mathematical numeral systems).
+
+↠  `push()` method - It is used to add one or more elements to the end of an array and return the new length of the array.
+
+↠  `prompt()` method - It is used to display a dialog box that prompts the user for input and returns the entered value or null if the user clicks cancel.
+
+```js
+// Example of using parseInt, push and prompt in a single example
+
+// Declare an empty array to store numbers
+let numbers = [];
+
+// Prompt the user for a number and parse it as an integer
+let number = parseInt(prompt("Enter a number"));
+
+// Push the number to the end of the array
+numbers.push(number);
+
+// Display the number and the array
+console.log("Your input number was: " + number);
+console.log("The array is: " + numbers);
+
+// Repeat until the user enters 0
+while (number != 0) {
+  // Prompt the user for another number and parse it as an integer
+  number = parseInt(prompt("Enter another number"));
+
+  // Push the number to the end of the array
+  numbers.push(number);
+
+  // Display the number and the array
+  console.log("Your input number was: " + number);
+  console.log("The array is: " + numbers);
+}
+```
+
+> - Declare an empty array called `numbers` using `let` keyword.
+> - Call the `prompt()` method with a string argument `"Enter a number"` and assign the returned value to a variable called `number`.
+> - Call the `parseInt()` method with two arguments: `number` and `10`. The first argument is the string to be parsed and the second argument is the radix (base) of the number system. In this case, we use `10` for decimal numbers. The `parseInt()` method returns an integer or `NaN` if it cannot parse the string. Assign the returned value to `number`.
+> - Call the `push()` method on `numbers` and pass it `number` as an argument. This method adds `number` to the end of the `numbers` array and returns its new length. We don't need to store this value, so we ignore it.
+> - Use `console.log()` to display `"Your input number was: "` followed by `number`, and `"The array is: "` followed by `numbers`.
+> - Use a `while` loop to repeat this process until the user enters `0`. The loop condition is `number != 0`, which means that as long as `number` is not equal to zero, the loop will continue.
+> - Inside the loop, we repeat steps 2 to 5 with a different string argument for `prompt()`: `"Enter another number"`.
+

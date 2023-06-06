@@ -43,14 +43,40 @@
 // console.log(newArr)
 
 
-//Reduce
-let arr = [45, 46, 89, 82, 79]
+// //Reduce
+// let arr = [45, 46, 89, 82, 79]
+//
+// let reduces = (acc, value) => {
+//     return acc + value
+// }
+// let sum = arr.reduce(reduces)
+// console.log(arr)
+// console.log(sum)
 
-let reduces = (acc, value) => {
-    return acc + value
-}
-let sum = arr.reduce(reduces)
-console.log(arr)
-console.log(sum)
 
+//Practice
+// 1. Add number to array
+// let a = 45;
+// let arr = [1, 2, 3, 4, 5]
+// // a = Number.parseInt(a) -> We will use this if we want to convert string to number
+// arr.push(a)
+// console.log(arr)
+
+//2. Filter for divisible by 10 and print the array
+
+// let arr = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
+//
+// let divFilter = arr.filter((a)=>{
+//     return a % 10 === 0
+// })
+//
+// console.log(divFilter)
+
+let arr = [1, 2, 3, 4, 5]
+
+let multiply = arr.reduce((x, y) => {
+    return x * y
+})
+
+console.log(multiply)
 
