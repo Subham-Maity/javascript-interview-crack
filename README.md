@@ -20,6 +20,7 @@ ___
 - [**Dev.to**](https://dev.to/codexam/how-to-use-loops-arrayfrom-map-filter-and-reduce-in-javascript-1f8l)
 
 ### TOC
+- [Syntax of All](#-syntax-of-all)
 - [Normal for loop](#-normal-for-loop)
 - [forEach loop](#-foreach-loop)
 - [for...of loop](#-forof-loop)
@@ -30,9 +31,73 @@ ___
 - [reduce() method](#-reduce)
 - [parseInt, push and prompt](#-parseint-push-and-prompt)
 
+#### 🔗 Syntax of All
 
-- For Loops With Arrays
+- Normal for loop:
+```javascript
+for (let i = 0; i < array.length; i++) {
+    // code
+}
+```
 
+- forEach loop:
+```javascript
+array.forEach(function(element) {
+    // code
+});
+```
+
+- for...of loop:
+```javascript
+for (const element of array) {
+    // code
+}
+```
+
+- for...in loop:
+```javascript
+for (const key in object) {
+    // code
+}
+```
+
+- Array.from() method:
+```javascript
+Array.from(object, mapFunction, thisValue)
+```
+
+- map() method:
+```javascript
+array.map(function(currentValue, index, arr), thisValue)
+```
+
+- filter() method:
+```javascript
+array.filter(function(currentValue, index, arr), thisValue)
+```
+
+- reduce() method:
+```javascript
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+```
+
+- parseInt:
+```javascript
+parseInt(string, radix)
+```
+
+- push:
+```javascript
+array.push(item1, item2, ..., itemX)
+```
+
+- prompt:
+```javascript
+prompt("Text", "DefaultText")
+```
+
+
+### 📝 Explanation
 `let num = [1, 2, 3, 4, 5]`
 
 #### 🔗 Normal for loop
