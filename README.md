@@ -3,6 +3,7 @@
 
 - [Chapter 2 (Loops, Array.form , Map , Filter , Reduce )](#chapter-2-loops-arrayform--map--filter--reduce--parseint-push-and-prompt)
 
+- [Chapter 3 (Callbacks , Promises and Async/Await)](#chapter-3-callbacks--promises-and-asyncawait)
 ________
 ## Chapter 1: Basic of JavaScript
 
@@ -418,4 +419,72 @@ while (number != 0) {
 > - Use `console.log()` to display `"Your input number was: "` followed by `number`, and `"The array is: "` followed by `numbers`.
 > - Use a `while` loop to repeat this process until the user enters `0`. The loop condition is `number != 0`, which means that as long as `number` is not equal to zero, the loop will continue.
 > - Inside the loop, we repeat steps 2 to 5 with a different string argument for `prompt()`: `"Enter another number"`.
+
+____________________________
+
+## Chapter 3 (Callbacks , Promises and Async/Await)
+
+### TOC
+
+- [Callbacks](#-callbacks)
+
+#### 🔗 Callbacks
+A callback is a function passed as an argument to another function.
+
+Syntax
+```js
+function myCallback(result) {
+    console.log(result);
+}
+
+function myFunction(callback) {
+    let result = 1 + 1;
+    callback(result);
+}
+
+myFunction(myCallback);
+
+```
+
+**Example**
+
+```js
+//Method 1
+const calculate = (a, b, needFunction) => {
+    return needFunction(a, b)
+}
+
+const addition = calculate(2, 3, (a, b) => {
+    return a + b
+})
+
+
+console.log(addition)
+
+const subtraction = calculate(2, 3, (a, b) => {
+        return a - b
+    }
+)
+
+console.log(subtraction)
+
+//Method 2
+
+const multiply = (a, b) => {
+    return a * b
+}
+
+const multiplyResult = calculate(6, 3, multiply)
+console.log(multiplyResult)
+
+//Method 3
+
+const divide = (a, b) => {
+    return a / b;
+}
+
+const divisionResult = calculate(6, 3, divide);
+console.log(divisionResult);
+```
+
 

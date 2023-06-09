@@ -1,4 +1,4 @@
-// Chapter 2
+// Chapter 1
 // let num = [1, 2, 3, 4, 5]
 
 
@@ -13,7 +13,7 @@
 //     }
 // )
 
-// Chapter 3
+// Chapter 2
 
 // let arr = [45, 46, 89, 82, 79]
 // let newArr = arr.map((value, index, array) => {
@@ -72,11 +72,49 @@
 //
 // console.log(divFilter)
 
-let arr = [1, 2, 3, 4, 5]
+// let arr = [1, 2, 3, 4, 5]
+//
+// let multiply = arr.reduce((x, y) => {
+//     return x * y
+// })
+//
+// console.log(multiply)
 
-let multiply = arr.reduce((x, y) => {
-    return x * y
+// Chapter 3
+
+//Method 1
+const calculate = (a, b, needFunction) => {
+    return needFunction(a, b)
+}
+
+const addition = calculate(2, 3, (a, b) => {
+    return a + b
 })
 
-console.log(multiply)
 
+console.log(addition)
+
+const subtraction = calculate(2, 3, (a, b) => {
+        return a - b
+    }
+)
+
+console.log(subtraction)
+
+//Method 2
+
+const multiply = (a, b) => {
+    return a * b
+}
+
+const multiplyResult = calculate(6, 3, multiply)
+console.log(multiplyResult)
+
+//Method 3
+
+const divide = (a, b) => {
+    return a / b;
+}
+
+const divisionResult = calculate(6, 3, divide);
+console.log(divisionResult);

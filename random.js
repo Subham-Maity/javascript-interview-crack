@@ -1,7 +1,15 @@
-let arr = [45, 46, 89, 82, 79]
-let newArr = arr.map((value, index, array) => {
-    return `The sum of ${value} and ${index} is ${value + index} and the array is ${array}`
-})
+const math = (a , b , addFunction) => {
+    return addFunction(a,b)
+}
 
-console.log(arr)
-console.log(newArr)
+//multiply function
+const multiplys = (num1 , num2) => {
+    return num1 * num2
+}
+
+// calling
+const multiply = math(2 , 3 , multiplys)
+
+console.log(multiply)
+
+
