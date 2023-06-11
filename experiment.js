@@ -83,38 +83,85 @@
 // Chapter 3
 
 //Method 1
-const calculate = (a, b, needFunction) => {
-    return needFunction(a, b)
+// const calculate = (a, b, needFunction) => {
+//     return needFunction(a, b)
+// }
+//
+// const addition = calculate(2, 3, (a, b) => {
+//     return a + b
+// })
+//
+//
+// console.log(addition)
+//
+// const subtraction = calculate(2, 3, (a, b) => {
+//         return a - b
+//     }
+// )
+//
+// console.log(subtraction)
+//
+// //Method 2
+//
+// const multiply = (a, b) => {
+//     return a * b
+// }
+//
+// const multiplyResult = calculate(6, 3, multiply)
+// console.log(multiplyResult)
+//
+// //Method 3
+//
+// const divide = (a, b) => {
+//     return a / b;
+// }
+//
+// const divisionResult = calculate(6, 3, divide);
+// console.log(divisionResult);
+
+//Array CallBack Function
+
+//First Negative Number
+
+// const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+//
+// const firstNeg = (num) => {
+//     return num < 0;
+// }
+// const result = a.find(firstNeg)
+//
+// console.log(result)
+
+// const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+//
+// const firstNeg = (num) => {
+//     return num < 0;
+// }
+// const result = a.findIndex(firstNeg)
+//
+// console.log(result)
+
+
+// Asyncronous
+
+// setTimeout(() => {
+//     console.log('Hello')
+// }
+// , 2000)
+//
+// console.log('Subham')
+
+
+function  getCheese(callback) {
+    setTimeout(() => {
+       const cheese = '🧀'
+        console.log("Cheese is here", cheese)
+        callback(cheese)
+    }, 2000)
 }
 
-const addition = calculate(2, 3, (a, b) => {
-    return a + b
+getCheese((cheese) => {
+    console.log("I love", cheese)
 })
 
 
-console.log(addition)
-
-const subtraction = calculate(2, 3, (a, b) => {
-        return a - b
-    }
-)
-
-console.log(subtraction)
-
-//Method 2
-
-const multiply = (a, b) => {
-    return a * b
-}
-
-const multiplyResult = calculate(6, 3, multiply)
-console.log(multiplyResult)
-
-//Method 3
-
-const divide = (a, b) => {
-    return a / b;
-}
-
-const divisionResult = calculate(6, 3, divide);
-console.log(divisionResult);

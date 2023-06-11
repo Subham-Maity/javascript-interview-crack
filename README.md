@@ -487,4 +487,208 @@ const divisionResult = calculate(6, 3, divide);
 console.log(divisionResult);
 ```
 
+##### ⌚ Array Callback Methods
 
+| Method        | Description                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------|
+| `find()`      | Returns the first value of an array element that passes a test                               |
+| `findIndex()` | Returns the first index of an array element that passes a test                               |
+| `forEach()`   | Calls a function for each element                                                            |
+| `map()`       | Creates a new array with the results of calling a function for every array element           |
+| `filter()`    | Returns a new array with all elements that pass the test defined by the given function       |
+| `every()`     | Check whether all the elements of the array satisfy the given condition or not               |
+| `some()`      | Check whether at least one of the elements of the array satisfies the given condition or not |
+
+
+
+##### ⌚ `find()` method
+```js
+//First Negative Number
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const firstNeg = (num) => {
+    return num < 0;
+}
+const result = a.find(firstNeg)
+
+console.log(result)
+
+//Output: -2
+```
+
+##### ⌚ `findIndex()` method
+```js
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const firstNeg = (num) => {
+    return num < 0;
+}
+const result = a.findIndex(firstNeg)
+
+console.log(result)
+
+//Output: 3
+```
+##### ⌚ `forEach()` method
+```js
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const result = a.forEach((num) => {
+    console.log(num)
+})
+
+//Output: 4
+
+//Output: 1
+
+//Output: 6
+
+//Output: -2
+//....
+
+// You can also print the index of the array
+
+const result = a.forEach((num, index) => {
+    console.log(num, index)
+})
+
+//Output: 4 0
+
+//Output: 1 1
+
+//Output: 6 2
+
+//Output: -2 3
+
+//....
+```
+
+##### ⌚ `map()` method
+```js
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const result = a.map((num) => {
+    return num * 2
+})
+
+console.log(result)
+
+//Output: [ 8, 2, 12, -4, -10, -6, 4, 16, 12, 14, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ]
+```
+
+##### ⌚ `filter()` method
+```js
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const result = a.filter((num) => {
+    return num > 0
+})
+
+console.log(result)
+
+//Output: [ 4, 1, 6, 2, 8, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ]
+```
+
+##### ⌚ `every()` method
+```js
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const result = a.every((num) => {
+    return num > 0
+})
+
+console.log(result)
+
+//Output: false
+```
+
+##### ⌚ `some()` method
+```js
+
+const a = [4, 1, 6, -2, -5, -3, 2.,8, 6,7 , 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+
+const result = a.some((num) => {
+    return num > 0
+})
+
+console.log(result)
+
+//Output: true
+```
+
+
+
+#### 🔗 Callbacks Hell
+
+A callback is a function passed as an argument to another function, and `callback hell` is a situation where you have a lot of callbacks inside callback.
+
+##### Syncronous 
+
+```js
+console.log('1')
+console.log('2')
+console.log('3')
+```
+> - Here first `1` will be printed then `2` and then `3` will be printed. This is called `Syncronous` execution means one after another execution.
+
+##### Asyncronous
+
+###### setTimeout Function
+
+- The setTimeout() method calls a function after a number of milliseconds.
+- The setTimeout() method executes a block of code after the specified time.
+- The method executes the code only once.
+- setTimeout() is an asynchronous function, meaning that the timer function
+- will not pause the execution of other functions in the function's stack. The
+- commonly used syntax of JavaScript setTimeout is: `setTimeout(function, milliseconds);`
+
+Simple Example
+
+Syntax: `setTimeout(function, milliseconds);`
+```js
+setTimeout(() => {
+    console.log('Hello')
+}
+, 2000)
+
+console.log('Subham')
+
+//Output: Subham
+//Output: Hello
+
+// You can also use function instead of arrow function
+
+setTimeout(function() {
+    console.log('Hello')
+}
+, 2000)
+
+console.log('Subham')
+
+//Output: Subham
+```
+
+another example
+
+```js
+const mul = (a, b) => {
+  console.log(a * b);
+}
+
+const mul2 = (c, d) => {
+  console.log(c * d);
+}
+
+setTimeout(() => {
+  mul2(4, 5);
+}, 2000);
+
+mul(2, 4);
+```
+
+> - Here first `mul(2, 4)` will be printed then after 2 seconds `mul2(4, 5)` will be printed. This is called `Asyncronous` execution means not one after another execution.
